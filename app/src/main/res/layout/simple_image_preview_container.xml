@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="@dimen/standard_gutter">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_activity_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/activity_information"
+            tools:text="Activity Information:\nTask Id:231\nRunningActivities: 3\nCurrent Activity Hash: 432313242" />
+
+        <LinearLayout
+            android:id="@+id/ll_configuration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_guide_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/standard_gutter"
+                android:padding="@dimen/standard_gutter"
+                android:text="@string/activity_information"
+                android:textColor="@android:color/holo_red_dark"
+                android:visibility="gone"
+                tools:text="Exit the app and share single photo from google photos app"
+                tools:visibility="visible" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/standard_gutter">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/tiet_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Delay to load shared image in ms"
+                    android:inputType="number" />
+            </android.support.design.widget.TextInputLayout>
+
+            <RadioGroup
+                android:id="@+id/rg_finish_before"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Finish this activity before launching the other activity" />
+
+                <RadioButton
+                    android:id="@+id/rb_finish_before"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Finish before" />
+
+                <RadioButton
+                    android:id="@+id/rb_finish_after"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Finish after" />
+
+                <RadioButton
+                    android:id="@+id/rb_dont_finish"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Don't finish" />
+
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/btn_launch_activity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/standard_gutter"
+                android:onClick="launchActivity"
+                android:text="Launch Activity" />
+
+            <CheckBox
+                android:id="@+id/cb_load_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/standard_gutter"
+                android:text="Load image here" />
+
+            <ImageView
+                android:id="@+id/iv_preview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="100dp"
+                android:minHeight="100dp"
+                tools:src="@tools:sample/avatars" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

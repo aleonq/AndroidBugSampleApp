@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ShareContentUriSample</string>
+    <string name="activity_information">Activity Information:\n%s</string>
+</resources>
